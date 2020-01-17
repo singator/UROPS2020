@@ -9,19 +9,17 @@ Created on Fri Jan 17 20:21:36 2020
 from bs4 import BeautifulSoup
 import argparse
 
-parser = argparse.ArgumentParser(description='Visualize Pen Input')
+parser = argparse.ArgumentParser(description='Convert xml file to scgink file')
 parser.add_argument('fname')
 args = parser.parse_args()
 
 # change source directory for own use
-path = '/home/wenhan/git/UROPS2020'
 
 #file name should be ****.scgink
 file = f'{args.fname}'   
 
-fullpath = path+'/'+file
 
-with open("test.", "r") as f:
+with open(file, "r") as f:
     
     contents = f.read()
 
@@ -46,7 +44,7 @@ with open("test.", "r") as f:
 
 f.close()
 
-newf= open("test.scgink","w+")
+newf= open("converted.scgink","w+")
 newf.write('SCG_INK\n')
 newf.write(str(len(allstrokes))+'\n')
 for i in range(counter):
