@@ -1,0 +1,32 @@
+digraph mathExp{
+Term0 -> Sym1 [label=H]
+Tx1 [shape=box,label="x"]
+Sym1 -> Tx1
+Term0 -> OpTerm2 [label=H]
+OpTerm2 -> OpBin3 [label=H]
+Te3 [shape=box,label="="]
+OpBin3 -> Te3
+OpTerm2 -> Term4 [label=H]
+Term4 -> LetterMin5 [label=H]
+Te5 [shape=box,label="e"]
+LetterMin5 -> Te5
+Term4 -> Term6 [label=H]
+Term6 -> LetterMin7 [label=H]
+Tx7 [shape=box,label="x"]
+LetterMin7 -> Tx7
+Term6 -> Term8 [label=H]
+Term8 -> LetterMin9 [label=H]
+Tp9 [shape=box,label="p"]
+LetterMin9 -> Tp9
+Term8 -> Term10 [label=H]
+Term10 -> OpenPar11 [label=H]
+TL11 [shape=box,label="("]
+OpenPar11 -> TL11
+Term10 -> TermPar12 [label=H]
+TermPar12 -> Sym13 [label=H]
+T413 [shape=box,label="4"]
+Sym13 -> T413
+TermPar12 -> ClosePar14 [label=H]
+TR14 [shape=box,label=")"]
+ClosePar14 -> TR14
+}
