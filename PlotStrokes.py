@@ -10,17 +10,15 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Visualize Pen Input')
 parser.add_argument('fname')
+parser.add_argument('outname')
 args = parser.parse_args()
-
-# change source directory for own use
-path = '/home/wenhan/git/UROPS2020/Seshat-master/SampleMathExps'
 
 #file name should be ****.scgink
 file = f'{args.fname}'   
+#output png file name should be ****.png
+newfname = f'{args.outname}' 
 
-fullpath = path+'/'+file
-   
-file = open(fullpath, 'r')
+file = open(file, 'r')
 file.readline()
 strokes = file.readline()
 d={}
@@ -37,11 +35,10 @@ for i in range(int(strokes)):
             d[i].append(line)
             x = line[0]
             y = line[1]
-            xcoor.append(int(x))
-            ycoor.append(-int(y))
+            xcoor.append(float(x))
+            ycoor.append(-float(y))
     plt.plot(xcoor, ycoor, color='black')
     
-newfname = 'Output.png'
 plt.savefig(newfname)
 plt.show()
 file.close()
