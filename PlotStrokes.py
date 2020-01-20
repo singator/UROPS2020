@@ -9,20 +9,18 @@ import matplotlib.pyplot as plt
 import argparse
 
 parser = argparse.ArgumentParser(description='Visualize Pen Input')
-parser.add_argument('fname')
-parser.add_argument('outname')
+parser.add_argument('scgfile')
 args = parser.parse_args()
 
 #file name should be ****.scgink
-file = f'{args.fname}'   
-#output png file name should be ****.png
-newfname = f'{args.outname}' 
+file = f'{args.scgfile}'   
+newfname = '/home/wenhan/git/UROPS2020/Plots/' + str(file).strip('scgink') + 'png'
 
-file = open(file, 'r')
+file = open('/home/wenhan/git/UROPS2020/SCG/'+file, 'r')
 file.readline()
 strokes = file.readline()
 d={}
-plt.figure(figsize=(9,6))
+plt.figure(figsize=(16,6))
 plt.axis('off')
 for i in range(int(strokes)):
     npts = file.readline()
@@ -38,7 +36,6 @@ for i in range(int(strokes)):
             xcoor.append(float(x))
             ycoor.append(-float(y))
     plt.plot(xcoor, ycoor, color='black')
-    
 plt.savefig(newfname)
 plt.show()
 file.close()
