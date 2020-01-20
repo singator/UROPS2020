@@ -8,23 +8,17 @@ Created on Fri Jan 17 20:21:36 2020
 
 from bs4 import BeautifulSoup
 import argparse
-import os
 
-
-parser = argparse.ArgumentParser(description='Convert xopp file to scgink file')
+parser = argparse.ArgumentParser(description='Convert xml file to scgink file')
 parser.add_argument('inputfile')
 args = parser.parse_args()
 
-#file name should be ****.xopp
+#file name should be ****.
 file = f'{args.inputfile}'   
-output = '/home/wenhan/git/UROPS2020/SCG/' + str(file).strip('xopp') + 'scgink'
-
-cmd = 'gzip -d -S xopp ' + '/home/wenhan/git/UROPS2020/Input/' + file
-os.system(cmd)
-xmlfile = str(file).strip('xopp')
+output = '/home/wenhan/git/UROPS2020/SCG/' + str(file) + 'scgink'
 
 #read strokes content
-with open('/home/wenhan/git/UROPS2020/Input/'+xmlfile, "r") as f:
+with open('/home/wenhan/git/UROPS2020/Input/'+file, "r") as f:
     contents = f.read()
     soup = BeautifulSoup(contents, 'xml')
     allstrokes = {}
