@@ -1,15 +1,17 @@
 # UROPS2020
 
-To run PlotStrokes.py:
-1. Open terminal and cd to the directory of the file
-2. $ python3 PlotStrokes.py filename.scgink output.png
+Main program is RunSeshat.py
+The program will take a xml (converting it to scgink format) and pass it through the seshat model and output a tex file.
+It will also generate a png file to visualize the pen input
 
-The program will display the plot and also save the plot as output.png
+Requirements:
+1. a folder named "SCG" to store the converted scgink file
+2. a folder named "Input" to store the xml file
+3. a folder named "Plots" to store the png file
+4. a folder named "Latex" to store the tex file
+5. GetLatex.py needs to be inside the Seshat folder
 
-To run ScginkConverter.py:
-1. Suppose given a test.xopp file from Xounral++ app
-2. do $ gzip -d -S xopp test.xopp. This will overwrite the original test.xopp to test.
-1. cd to the directory of the .py file
-2. do $ python3 ScginkConverter.py test. converted.scgink
+Customized dits are required to adjust for directory paths in the .py files
 
-The program willoutput scgink.scgink file in the same directory
+TO run the program (given a input xml file named "test."):
+1. $ python3 RunSeshat test. 
