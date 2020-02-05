@@ -1,5 +1,6 @@
 # UROPS2020
 
+INITAL TEST:
 Main program is RunSeshat.py
 The program will take a xml (converting it to scgink format) and pass it through the seshat model and output a tex file.
 It will also generate a png file to visualize the pen input
@@ -15,3 +16,8 @@ Customized dits are required to adjust for directory paths in the .py files
 
 TO run the program (given a input xml file named "test."):
 1. $ python3 RunSeshat test. 
+
+
+UPDATE:
+The file NewPageClass.py creates a Page objection.
+The loadlines method takes in a xopp file and run seshat to get the individual lines of the file and stores them in the dictionary in the lines attribute
