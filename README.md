@@ -23,3 +23,7 @@ UPDATE:
 
 The file NewPageClass.py creates a Page objection.
 The loadlines method takes in a xopp file and run seshat to get the individual lines of the file and stores them in the dictionary in the lines attribute
+
+UPDATE:
+New class Document added.
+It takes in a xopp file. It has the attribute pages, which is a dictionary of NewPage class for each page of the xopp.
