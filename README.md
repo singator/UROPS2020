@@ -1,4 +1,6 @@
 # UROPS2020
+This is a school project for mathematical handwriting detection and grading which uses seshat developed by Francisco Alvaro and Joan-Andreu Sanchez and Jose-Miguel Bened, and Mathematica developed by Wolfram.
+
 
 INITIAL TEST:
 
