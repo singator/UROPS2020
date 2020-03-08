@@ -14,9 +14,9 @@ args = parser.parse_args()
 
 #file name should be ****.scgink
 file = f'{args.scgfile}'   
-newfname = '/home/wenhan/git/UROPS2020/Plots/' + str(file).strip('scgink') + 'png'
+newfname = '/home/wenhan/PycharmProjects/UROPS2020/Plots/' + str(file).strip('scgink') + 'png'
 
-file = open('/home/wenhan/git/UROPS2020/SCG/'+file, 'r')
+file = open('/home/wenhan/PycharmProjects/UROPS2020/SCG/'+file, 'r')
 file.readline()
 strokes = file.readline()
 d={}

@@ -28,7 +28,7 @@ else:
 cmd = 'python3 PlotStrokes.py ' + fname 
 os.system(cmd)
 
-os.chdir('/home/wenhan/git/UROPS2020/Seshat-master')
+os.chdir('/home/wenhan/PycharmProjects/UROPS2020/Seshat-master')
 cmd = 'python3 GetLatex.py ' + fname 
 os.system(cmd)
-os.chdir('/home/wenhan/git/UROPS2020')
+os.chdir('/home/wenhan/PycharmProjects/UROPS2020')

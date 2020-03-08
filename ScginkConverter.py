@@ -13,7 +13,7 @@ from lxml import etree as et
 
 # function to unzip xopp to xml
 def UnzipXopp(fname):
-    with gzip.open('/home/wenhan/git/UROPS2020/Input/' + fname) as f:
+    with gzip.open('/home/wenhan/PycharmProjects/UROPS2020/Input/' + fname) as f:
         content = f.readlines()
         s = ''
         for line in content:
@@ -22,7 +22,7 @@ def UnzipXopp(fname):
     f.close()
     
     root = et.XML(s)
-    with open('/home/wenhan/git/UROPS2020/Input/' + fname.strip('.xopp') + '.xml', 'w') as newfile:
+    with open('/home/wenhan/PycharmProjects/UROPS2020/Input/' + fname.strip('.xopp') + '.xml', 'w') as newfile:
         newfile.write(et.tostring(root, xml_declaration=True).decode('utf-8'))
     newfile.close()
 
@@ -38,7 +38,7 @@ UnzipXopp(str(file))
 filenameWOextension = str(file).strip('xopp')
 
 #read strokes content
-with open('/home/wenhan/git/UROPS2020/Input/'+filenameWOextension+'xml', "r") as f:
+with open('/home/wenhan/PycharmProjects/UROPS2020/Input/'+filenameWOextension+'xml', "r") as f:
     contents = f.read()
     soup = BeautifulSoup(contents, 'lxml')
     allstrokes = {}
@@ -60,7 +60,7 @@ with open('/home/wenhan/git/UROPS2020/Input/'+filenameWOextension+'xml', "r") as
 f.close()
 
 #write strokes content into scgink format
-output = '/home/wenhan/git/UROPS2020/SCG/' + filenameWOextension + 'scgink'
+output = '/home/wenhan/PycharmProjects/UROPS2020/SCG/' + filenameWOextension + 'scgink'
 
 newf= open(output,"w+")
 newf.write('SCG_INK\n')

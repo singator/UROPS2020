@@ -10,7 +10,7 @@ import gzip
 from lxml import etree as et
 
 def UnzipXopp(fname, output):
-    with gzip.open('/home/wenhan/git/UROPS2020/Input/' + fname) as f:
+    with gzip.open('/home/wenhan/PycharmProjects/UROPS2020/Input/' + fname) as f:
         content = f.readlines()
         s = ''
         for line in content:

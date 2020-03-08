@@ -14,9 +14,9 @@ parser.add_argument('scgfile')
 args = parser.parse_args()
 
 inputfile = f'{args.scgfile}'   
-outputfile = '/home/wenhan/git/UROPS2020/Latex/' + str(inputfile).strip('scgink') + 'tex'
+outputfile = '/home/wenhan/PycharmProjects/UROPS2020/Latex/' + str(inputfile).strip('scgink') + 'tex'
 
-cmd = './seshat -c Config/CONFIG -i /home/wenhan/git/UROPS2020/SCG/' + inputfile +' -o out.inkml -r render.pgm -d out.dot > ' + outputfile
+cmd = './seshat -c Config/CONFIG -i /home/wenhan/PycharmProjects/UROPS2020/SCG/' + inputfile +' -o out.inkml -r render.pgm -d out.dot > ' + outputfile
 os.system(cmd)
 
 with open(outputfile, "r") as f:

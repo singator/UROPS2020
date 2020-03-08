@@ -9,7 +9,7 @@ Created on Tue Feb  4 22:01:54 2020
 import numpy as np
 import pandas as pd
 lst = []
-with open('/home/wenhan/git/UROPS2020/SCG/new_lines.scgink', 'r') as f:
+with open('/home/wenhan/PycharmProjects/UROPS2020/SCG/new_lines.scgink', 'r') as f:
     f.readline()
     numline = f.readline()
     for i in range(int(numline)):
@@ -24,7 +24,7 @@ end = np.asarray(lst)
 d = {"start": start,
      'end': end}
 df = pd.DataFrame(d)
-fname = '/home/wenhan/git/UROPS2020/'
+fname = '/home/wenhan/PycharmProjects/UROPS2020/'
    
 df.to_pickle(fname+'line_coordinates')
 
