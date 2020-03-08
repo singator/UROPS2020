@@ -1,20 +1,20 @@
 digraph mathExp{
-Term0 -> Sym1 [label=H]
-Tz1 [shape=box,label="z"]
-Sym1 -> Tz1
-Term0 -> OpTerm2 [label=H]
-OpTerm2 -> OpBin3 [label=H]
-Te3 [shape=box,label="="]
-OpBin3 -> Te3
-OpTerm2 -> Term4 [label=H]
-Term4 -> Sym5 [label=V]
-T15 [shape=box,label="1"]
-Sym5 -> T15
-Term4 -> VeFrac6 [label=V]
-VeFrac6 -> hline7 [label=e]
-Tm7 [shape=box,label="-"]
-hline7 -> Tm7
-VeFrac6 -> Term8 [label=e]
+Term0 -> Digit1 [label=H]
+T11 [shape=box,label="1"]
+Digit1 -> T11
+Term0 -> Term2 [label=H]
+Term2 -> Digit3 [label=H]
+T13 [shape=box,label="1"]
+Digit3 -> T13
+Term2 -> Term4 [label=H]
+Term4 -> Sym5 [label=H]
+Tx5 [shape=box,label="x"]
+Sym5 -> Tx5
+Term4 -> OpTerm6 [label=H]
+OpTerm6 -> OpBin7 [label=H]
+Te7 [shape=box,label="="]
+OpBin7 -> Te7
+OpTerm6 -> Term8 [label=H]
 Term8 -> Digit9 [label=H]
 T19 [shape=box,label="1"]
 Digit9 -> T19
