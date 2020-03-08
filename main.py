@@ -8,7 +8,7 @@ Created on Wed Feb 12 12:26:24 2020
 
 from DocumentClass import Document
 
-doc = Document('example.xopp')
+doc = Document('example1.xopp')
 for i in range(doc.numPages()):
     print('Page {}:\n'.format(i))
     doc.getPage(i).printLines()
