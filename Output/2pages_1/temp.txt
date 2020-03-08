@@ -1,0 +1,324 @@
+Number of strokes: 15
+
+CYK table initialization:
+Stroke 0:
+         dot [DecSep] 0.0949725
+           1 [Digit] 0.0298462
+         dot [Dot] 0.12346
+           i [LetterMin] 0.000386746
+         dot [OpBin] 0.0305812
+           + [OpSum] 6.36937e-06
+           - [OpUn] 0.0977856
+        lpar [OpenPar] 0.00124116
+           1 [Sym] 0.0284023
+           - [hline] 0.101893
+           a [leta] 0.000203923
+           1 [leti] 0.0436087
+           1 [letl] 0.0436087
+           n [letn] 0.00260316
+           + [lett] 6.36937e-06
+Stroke 1:
+       comma [Comma] 0.0157019
+         dot [DecSep] 0.447083
+           1 [Digit] 0.00027916
+         dot [Dot] 0.58119
+           i [LetterMin] 0.000111496
+         dot [OpBin] 0.143961
+           + [OpSum] 1.57158e-06
+           - [OpUn] 0.041249
+        lpar [OpenPar] 0.00056328
+           i [Sym] 8.84059e-05
+           - [hline] 0.0429817
+           i [leti] 0.000302438
+           1 [letl] 0.000407884
+           + [lett] 1.57158e-06
+Stroke 2:
+       comma [Comma] 0.000128395
+         dot [DecSep] 0.0547886
+           2 [Digit] 2.6072e-05
+         dot [Dot] 0.0712229
+           i [LetterMin] 4.73548e-06
+           - [OpBin] 0.592662
+           + [OpSum] 2.46722e-07
+           - [OpUn] 0.979161
+        lpar [OpenPar] 1.06029e-05
+           i [Sym] 3.75478e-06
+           - [hline] 1.02029
+           i [leti] 1.28452e-05
+           0 [leto] 2.81331e-05
+           + [lett] 2.46722e-07
+Stroke 3:
+ \rightarrow [Arrow] 6.48691e-07
+       comma [Comma] 0.000128395
+         dot [DecSep] 0.056243
+           2 [Digit] 2.6072e-05
+         dot [Dot] 0.0731136
+           i [LetterMin] 4.73548e-06
+           - [OpBin] 0.566999
+           + [OpSum] 3.93839e-07
+           - [OpUn] 0.936763
+           i [Sym] 3.75478e-06
+           - [hline] 0.976113
+           i [leti] 1.28452e-05
+           0 [leto] 2.81331e-05
+           + [lett] 3.93839e-07
+Stroke 4:
+ \rightarrow [Arrow] 3.84647e-07
+        dots [CDots] 1.99191e-08
+       comma [Comma] 5.58215e-07
+         dot [DecSep] 0.000580272
+           0 [Digit] 1.17068e-06
+         dot [Dot] 0.000754329
+      \sigma [Greek] 5.31899e-07
+        dots [LDots] 1.63085e-08
+           - [OpBin] 1.05955
+           + [OpSum] 1.27137e-08
+           - [OpUn] 1.75053
+           0 [Sym] 1.0572e-06
+           - [hline] 1.82407
+           0 [leto] 2.65393e-06
+           + [lett] 1.27137e-08
+Stroke 5:
+        dots [CDots] 2.61128e-06
+       comma [Comma] 0.248576
+         dot [DecSep] 0.361833
+           4 [Digit] 0.000391721
+         dot [Dot] 0.470367
+        dots [LDots] 2.13795e-06
+           i [LetterMin] 3.49932e-05
+         dot [OpBin] 0.11651
+           + [OpSum] 7.55912e-05
+           + [OpUn] 2.67969e-05
+      \prime [Prime] 0.00010255
+           i [Sym] 2.77463e-05
+           a [leta] 0.000239337
+           i [leti] 9.49206e-05
+           1 [letl] 9.5602e-05
+           + [lett] 7.55912e-05
+Stroke 6:
+ \rightarrow [Arrow] 4.94979e-07
+       comma [Comma] 6.95867e-05
+         dot [DecSep] 0.0284487
+           0 [Digit] 7.93355e-06
+         dot [Dot] 0.0369822
+           i [LetterMin] 1.75889e-06
+           - [OpBin] 0.775571
+           + [OpSum] 2.28632e-07
+           - [OpUn] 1.28135
+           i [Sym] 1.39463e-06
+           - [hline] 1.33518
+           i [leti] 4.77106e-06
+           0 [leto] 1.79853e-05
+           + [lett] 2.28632e-07
+Stroke 7:
+ \rightarrow [Arrow] 1.34842e-07
+        rpar [ClosePar] 3.61688e-06
+           3 [Digit] 0.865489
+           x [LetterMin] 1.0838e-05
+         \gt [OpBin] 1.42466e-05
+           3 [Sym] 0.548558
+           5 [lets] 0.000364939
+         \gt [sgt] 0.000118637
+Stroke 8:
+         dot [DecSep] 0.134818
+           0 [Digit] 0.00333238
+         dot [Dot] 0.175258
+           C [LetterCap] 0.00575536
+           c [LetterMin] 0.0984146
+         dot [OpBin] 0.0434116
+        lpar [OpenPar] 0.02473
+           c [Sym] 0.0886085
+           c [letc] 0.375172
+           0 [leto] 0.00755448
+         \lt [slt] 0.000614657
+Stroke 9:
+ \rightarrow [Arrow] 1.55159e-05
+         dot [DecSep] 0.0033318
+           0 [Digit] 0.536742
+         dot [Dot] 0.0043312
+           a [LetterMin] 0.00266108
+         dot [OpBin] 0.00107284
+           0 [Sym] 0.484713
+           a [leta] 0.00643125
+           i [leti] 4.79458e-07
+           0 [leto] 1.21679
+Stroke 10:
+         dot [DecSep] 0.0382906
+           5 [Digit] 0.0136236
+         dot [Dot] 0.0497762
+           s [LetterMin] 0.0222407
+         dot [OpBin] 0.0123296
+           - [OpUn] 0.00183076
+           5 [Sym] 0.00910585
+           - [hline] 0.00190767
+           s [lets] 0.0854546
+         \gt [sgt] 0.00038659
+Stroke 11:
+         dot [DecSep] 3.41237e-05
+           0 [Digit] 0.60307
+         dot [Dot] 4.43594e-05
+      \theta [Greek] 5.10403e-06
+           o [LetterMin] 0.000737341
+         dot [OpBin] 1.09878e-05
+           0 [Sym] 0.544611
+           a [leta] 0.000812103
+           0 [leto] 1.36716
+Stroke 12:
+        rpar [ClosePar] 0.00859398
+         dot [DecSep] 0.0702928
+           2 [Digit] 0.00129443
+         dot [Dot] 0.0913777
+           n [LetterMin] 0.000977149
+           - [OpBin] 0.0937258
+           - [OpUn] 0.154848
+           n [Sym] 0.000880475
+           - [hline] 0.161353
+           i [leti] 0.000143492
+           n [letn] 0.00268274
+Stroke 13:
+           2 [Digit] 1.37732
+           z [LetterMin] 3.43427e-06
+       equal [OpBin] 7.0963e-11
+           2 [Sym] 0.776973
+           a [leta] 1.32668e-08
+           1 [leti] 1.39311e-07
+           1 [letl] 1.39311e-07
+Stroke 14:
+         dot [DecSep] 0.00093601
+           8 [Digit] 0.333099
+         dot [Dot] 0.00121677
+       \beta [Greek] 0.00012225
+           x [LetterMin] 0.00161579
+         dot [OpBin] 0.000301396
+           8 [Sym] 0.20389
+           g [letg] 0.00133289
+           5 [lets] 5.34719e-05
+Multi-stroke (2) hypothesis: { 2 3 }
+           | [Bar] 1.5308e-06
+        rpar [ClosePar] 0.000171174
+       comma [Comma] 5.41139e-06
+         dot [DecSep] 0.000264643
+           1 [Digit] 0.000265886
+         dot [Dot] 0.000344025
+       equal [OpBin] 0.148014
+           + [OpSum] 0.000352399
+           + [OpUn] 0.000124925
+        lpar [OpenPar] 1.00989e-06
+      \prime [Prime] 0.00112287
+           1 [Sym] 0.000253023
+           - [hline] 4.91233e-06
+           1 [leti] 0.00038849
+           1 [letl] 0.00038849
+           + [lett] 0.000352399
+Multi-stroke (2) hypothesis: { 8 9 }
+ \rightarrow [Arrow] 7.59646e-09
+         dot [DecSep] 4.18198e-09
+           0 [Digit] 4.52379e-08
+         dot [Dot] 5.43641e-09
+      \Delta [Greek] 1.32493e-11
+           a [LetterMin] 7.9709e-09
+         dot [OpBin] 1.3466e-09
+           - [OpUn] 7.25905e-13
+           0 [Sym] 4.08526e-08
+           - [hline] 7.56399e-13
+           a [leta] 1.92639e-08
+           0 [leto] 1.02554e-07
+Multi-stroke (2) hypothesis: { 9 10 }
+ \rightarrow [Arrow] 7.62643e-05
+           5 [Digit] 6.96778e-05
+           x [LetterMin] 5.82797e-06
+ \rightarrow [OpBin] 6.21151e-06
+           - [OpUn] 3.58945e-10
+           5 [Sym] 4.65718e-05
+           - [hline] 3.74023e-10
+           5 [lets] 0.000144741
+Multi-stroke (3) hypothesis: { 8 9 10 }
+ \rightarrow [Arrow] 1.10569e-10
+        \cos [LetterMin] 0.000104731
+ \rightarrow [OpBin] 9.00552e-12
+        \cos [Sym] 2.35366e-05
+           a [leta] 5.41259e-15
+           m [letm] 3.48922e-15
+           s [lets] 2.28938e-15
+Multi-stroke (2) hypothesis: { 11 12 }
+         dot [DecSep] 1.91435e-07
+           0 [Digit] 5.45531e-11
+         dot [Dot] 2.48858e-07
+      \theta [Greek] 8.79799e-09
+           a [LetterMin] 2.5841e-05
+         dot [OpBin] 6.16423e-08
+           a [Sym] 1.94508e-05
+           a [leta] 6.24521e-05
+           0 [leto] 1.23671e-10
+Multi-stroke (2) hypothesis: { 12 13 }
+ \rightarrow [Arrow] 0.00103519
+         dot [DecSep] 1.1282e-06
+           7 [Digit] 1.72883e-05
+         dot [Dot] 1.46662e-06
+           x [LetterMin] 4.61562e-05
+        \geq [OpBin] 0.00020576
+           - [OpUn] 1.52843e-07
+           x [Sym] 3.80657e-05
+           - [hline] 1.59264e-07
+           1 [leti] 1.06958e-05
+           1 [letl] 1.06958e-05
+Multi-stroke (3) hypothesis: { 11 12 13 }
+         dot [DecSep] 8.00855e-11
+           8 [Digit] 1.73318e-12
+         dot [Dot] 1.04108e-10
+      \alpha [Greek] 1.1119e-10
+           R [LetterCap] 2.35824e-11
+        \cos [LetterMin] 5.23363e-08
+         dot [OpBin] 2.57875e-11
+        \cos [Sym] 1.17617e-08
+           a [leta] 9.53548e-09
+Multi-stroke (2) hypothesis: { 13 14 }
+ \rightarrow [Arrow] 0.0109202
+           4 [Digit] 0.00331892
+           z [LetterMin] 0.00724272
+ \rightarrow [OpBin] 0.000889418
+           z [Sym] 0.00608028
+Multi-stroke (3) hypothesis: { 12 13 14 }
+ \rightarrow [Arrow] 2.74339e-09
+         dot [DecSep] 8.23047e-12
+           8 [Digit] 1.43249e-12
+         dot [Dot] 1.06993e-11
+       \beta [Greek] 4.40084e-11
+        \cos [LetterMin] 6.3324e-08
+ \rightarrow [OpBin] 2.23441e-10
+        \cos [Sym] 1.42311e-08
+
+CYK parsing algorithm
+Size 1: Generated 15
+Size 2: Generated 22
+Size 3: Generated 34
+Size 4: Generated 47
+Size 5: Generated 55
+Size 6: Generated 64
+Size 7: Generated 67
+Size 8: Generated 63
+Size 9: Generated 56
+Size 10: Generated 47
+Size 11: Generated 36
+Size 12: Generated 24
+Size 13: Generated 13
+Size 14: Generated 5
+Size 15: Generated 1
+
+Most Likely Hypothesis (15 strokes)
+
+Math Symbols:
+- { 0 }
+\cdots { 1 2 3 }
+- { 4 }
+i { 5 }
+- { 6 }
+3 { 7 }
+\cos { 8 9 10 }
+0 { 11 }
+- { 12 }
+2 { 13 }
+8 { 14 }
+
+LaTeX:
+- \cdots - \frac{i}{3} \cos 0 - 28
