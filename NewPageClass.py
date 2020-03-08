@@ -12,13 +12,13 @@ import pandas as pd
 # class page to take in a scgink file
 class NewPage:
     def __init__(self, scgfile):
-        self.templines = pd.read_pickle('/home/wenhan/git/UROPS2020/line_coordinates')
+        self.templines = pd.read_pickle('/home/wenhan/PycharmProjects/UROPS2020/line_coordinates')
         self.numlines = 0
         self.lines = {}
         fname = scgfile.strip('.scgink')
 
         # step 1: create a folder in Output using the filename (Eg. test)
-        newpath = '/home/wenhan/git/UROPS2020/Output/' + fname
+        newpath = '/home/wenhan/PycharmProjects/UROPS2020/Output/' + fname
         try:
             os.mkdir(newpath)
         except OSError:
@@ -31,7 +31,7 @@ class NewPage:
         #         run seshat to get latex string,
         #           create lines attribute (dictionary)
         # a) store coordinates to self.lines
-        with open('/home/wenhan/git/UROPS2020/SCG/{}.scgink'.format(fname), 'r') as f:
+        with open('/home/wenhan/PycharmProjects/UROPS2020/SCG/{}.scgink'.format(fname), 'r') as f:
             f.readline()
             totalstrokes = f.readline()
 
@@ -74,7 +74,7 @@ class NewPage:
                     for i in range(len(strokes[0])):
                         linefile.write(str(strokes[0][i]) + ' ' + str(strokes[1][i]) + '\n')
             linefile.close()
-            os.chdir('/home/wenhan/git/UROPS2020/Seshat-master')
+            os.chdir('/home/wenhan/PycharmProjects/UROPS2020/Seshat-master')
             tempfile = newpath + '/' + 'temp.txt'
             cmd = './seshat -c Config/CONFIG -i ' + output + ' -o out.inkml -r render.pgm -d out.dot > ' + tempfile
             os.system(cmd)

@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 # function to unzip xopp to xml
 def UnzipXopp(fname):
-    with gzip.open('/home/wenhan/git/UROPS2020/Input/' + fname) as f:
+    with gzip.open('/home/wenhan/PycharmProjects/UROPS2020/Input/' + fname) as f:
         content = f.readlines()
         s = ''
         for line in content:
@@ -23,7 +23,7 @@ def UnzipXopp(fname):
     f.close()
 
     root = et.XML(s)
-    with open('/home/wenhan/git/UROPS2020/Input/' + fname.strip('.xopp') + '.xml', 'w') as newfile:
+    with open('/home/wenhan/PycharmProjects/UROPS2020/Input/' + fname.strip('.xopp') + '.xml', 'w') as newfile:
         newfile.write(et.tostring(root, xml_declaration=True).decode('utf-8'))
     newfile.close()
 
@@ -31,7 +31,7 @@ def UnzipXopp(fname):
 # function to convert xml to scgink
 def Convert(fname):
     name = fname.strip('.xml')
-    with open('/home/wenhan/git/UROPS2020/Input/{}'.format(fname), "r") as f:
+    with open('/home/wenhan/PycharmProjects/UROPS2020/Input/{}'.format(fname), "r") as f:
         contents = f.read()
         soup = BeautifulSoup(contents, 'lxml')
         pages = {}
@@ -58,7 +58,7 @@ def Convert(fname):
 
     # write strokes content into scgink format
     for num in pages.keys():
-        output = '/home/wenhan/git/UROPS2020/SCG/{}_{}.scgink'.format(name, num)
+        output = '/home/wenhan/PycharmProjects/UROPS2020/SCG/{}_{}.scgink'.format(name, num)
         newf = open(output, "w+")
         newf.write('SCG_INK\n')
         allstrokes = pages[num]
@@ -92,7 +92,7 @@ class Document:
         return self.npages
 
     def toLatex(self):
-        outputfile = '/home/wenhan/git/UROPS2020/Latex/{}.tex'.format(self.fname)
+        outputfile = '/home/wenhan/PycharmProjects/UROPS2020/Latex/{}.tex'.format(self.fname)
         with open(outputfile, "w") as f:
             f.write('\\documentclass{article}\n')
             f.write('\\usepackage[utf8]{inputenc}\n')
@@ -102,9 +102,7 @@ class Document:
                 page = self.pages[pageindex]
                 for index in range(page.getNumLines()):
                     line = page.getLines(index)
-                    f.write('$$\n')
-                    f.write('{}'.format(line))
-                    f.write('$$\n')
+                    f.write('$${}$$'.format(line))
             f.write('\\end{document}\n')
         f.close()
 
