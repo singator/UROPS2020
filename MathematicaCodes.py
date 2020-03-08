@@ -11,8 +11,6 @@ from wolframclient.language import wl
 from wolframclient.language import wlexpr
 
 session=wolframclient.evaluation.WolframLanguageSession()
-
-
 out1 = session.evaluate('Simplify[4x+1x==11, 5x==11]')
 print(out1)
 #out2 = session.evaluate('ImportString["\\frac{1}{11}", "TeX"]')
