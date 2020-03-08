@@ -8,19 +8,39 @@ Created on Fri Jan 17 20:21:36 2020
 
 from bs4 import BeautifulSoup
 import argparse
+import gzip
+from lxml import etree as et
 
-parser = argparse.ArgumentParser(description='Convert xml file to scgink file')
+# function to unzip xopp to xml
+def UnzipXopp(fname):
+    with gzip.open('/home/wenhan/git/UROPS2020/Input/' + fname) as f:
+        content = f.readlines()
+        s = ''
+        for line in content:
+            newline = str(line)[2:-3]
+            s += newline
+    f.close()
+    
+    root = et.XML(s)
+    with open('/home/wenhan/git/UROPS2020/Input/' + fname.strip('.xopp') + '.xml', 'w') as newfile:
+        newfile.write(et.tostring(root, xml_declaration=True).decode('utf-8'))
+    newfile.close()
+
+
+parser = argparse.ArgumentParser(description='Convert xopp file to scgink file')
 parser.add_argument('inputfile')
 args = parser.parse_args()
 
-#file name should be ****.
-file = f'{args.inputfile}'   
-output = '/home/wenhan/git/UROPS2020/SCG/' + str(file) + 'scgink'
+#file name should be ****.xopp
+file = f'{args.inputfile}'  
+UnzipXopp(str(file))
+ 
+filenameWOextension = str(file).strip('xopp')
 
 #read strokes content
-with open('/home/wenhan/git/UROPS2020/Input/'+file, "r") as f:
+with open('/home/wenhan/git/UROPS2020/Input/'+filenameWOextension+'xml', "r") as f:
     contents = f.read()
-    soup = BeautifulSoup(contents, 'xml')
+    soup = BeautifulSoup(contents, 'lxml')
     allstrokes = {}
     counter = 0
     for tag in soup.find_all("stroke"):
@@ -40,6 +60,8 @@ with open('/home/wenhan/git/UROPS2020/Input/'+file, "r") as f:
 f.close()
 
 #write strokes content into scgink format
+output = '/home/wenhan/git/UROPS2020/SCG/' + filenameWOextension + 'scgink'
+
 newf= open(output,"w+")
 newf.write('SCG_INK\n')
 newf.write(str(len(allstrokes))+'\n')

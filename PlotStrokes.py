@@ -20,7 +20,7 @@ file = open('/home/wenhan/git/UROPS2020/SCG/'+file, 'r')
 file.readline()
 strokes = file.readline()
 d={}
-plt.figure(figsize=(16,6))
+plt.figure(figsize=(25,40))
 plt.axis('off')
 for i in range(int(strokes)):
     npts = file.readline()
