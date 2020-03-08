@@ -13,9 +13,10 @@ from wolframclient.language import wlexpr
 session=wolframclient.evaluation.WolframLanguageSession()
 out1 = session.evaluate('Simplify[4x+1x==11, 5x==11]')
 print(out1)
-#out2 = session.evaluate('ImportString["\\frac{1}{11}", "TeX"]')
-#print(out2)
-#out2 = session.evaluate(wl.ToExpression("frac{1}{11}", wlexpr('TeXForm')))
-#print(out2)
+
+### convert latex form to mathematica form. Takes too long, does not end.
+### Function works well when used directly on Mathematica.
+out2 = session.evaluate(wl.ToExpression("\\frac{1}{11}", wlexpr('TeXForm')))
+print(out2)
 
 session.terminate()
