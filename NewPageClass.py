@@ -7,6 +7,10 @@ Created on Tue Feb  4 22:39:47 2020
 """
 import os
 import pandas as pd
+from CheckEquationEquality import check_eq_equality
+from sympy.parsing.latex import parse_latex
+import re
+
 
 
 # class page to take in a scgink file
@@ -14,6 +18,8 @@ class NewPage:
     def __init__(self, scgfile):
         self.templines = pd.read_pickle('/home/wenhan/PycharmProjects/UROPS2020/line_coordinates')
         self.numlines = 0
+
+        #self.lines is a dictionary of latex lines
         self.lines = {}
         fname = scgfile.strip('.scgink')
 
@@ -93,10 +99,28 @@ class NewPage:
             print(line)
 
     def getLines(self, n):
-        if type(n) == int and n >= 0 and n < len(self.lines):
+        if type(n) == int and 0 <= n < len(self.lines):
             return self.lines[n]
         else:
             return 'Line does not exist'
+
+    def evaluate(self):
+        if self.numlines > 0:
+            equations = list(map(lambda x: re.sub('\\n', '', x), list(self.lines.values())))
+            prior = parse_latex(r'{}'.format(equations[0]))
+            check = True
+            for i in range(1, len(equations)):
+                posterior = parse_latex(r'{}'.format(equations[i]))
+                if not check_eq_equality(prior, posterior):
+                    print('Fail at line "{}"'.format(equations[i]))
+                    check = False
+                    break
+                prior = posterior
+            if check:
+                print('Correct')
+        else:
+            print('No equation to evaluate.')
+
 
 
 

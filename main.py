@@ -9,7 +9,7 @@ Created on Wed Feb 12 12:26:24 2020
 from DocumentClass import Document
 
 doc = Document('example1.xopp')
-for i in range(doc.numPages()):
-    print('Page {}:\n'.format(i))
-    doc.getPage(i).printLines()
+doc.prettyPrint()
+doc.evaluatePage(0)
+doc.evaluatePage(1)
 doc.toLatex()
