@@ -1,10 +1,11 @@
 
 from bs4 import BeautifulSoup
-
+import os
 # function to convert xml to scgink
 def Convert(fname):
+    rootpt = os.getcwd()+'/'
     name = fname.strip('.xml')
-    with open('/home/wenhan/PycharmProjects/UROPS2020/Input/{}'.format(fname), "r") as f:
+    with open('{}Input/{}'.format(rootpt, fname), "r") as f:
         contents = f.read()
         soup = BeautifulSoup(contents, 'lxml')
         pages = {}
@@ -31,7 +32,7 @@ def Convert(fname):
 
     # write strokes content into scgink format
     for num in pages.keys():
-        output = '/home/wenhan/PycharmProjects/UROPS2020/SCG/{}_{}.scgink'.format(name, num)
+        output = '{}SCG/{}_{}.scgink'.format(rootpt, name, num)
         newf = open(output, "w+")
         newf.write('SCG_INK\n')
         allstrokes = pages[num]

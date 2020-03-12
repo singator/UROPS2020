@@ -16,7 +16,8 @@ import re
 # class page to take in a scgink file
 class NewPage:
     def __init__(self, scgfile):
-        self.templines = pd.read_pickle('/home/wenhan/PycharmProjects/UROPS2020/line_coordinates')
+        rootpt = os.getcwd() + '/'
+        self.templines = pd.read_pickle('{}line_coordinates'.format(rootpt))
         self.numlines = 0
 
         #self.lines is a dictionary of latex lines
@@ -24,7 +25,7 @@ class NewPage:
         fname = scgfile.strip('.scgink')
 
         # step 1: create a folder in Output using the filename (Eg. test)
-        newpath = '/home/wenhan/PycharmProjects/UROPS2020/Output/' + fname
+        newpath = '{}Output/'.format(rootpt) + fname
         try:
             os.mkdir(newpath)
         except OSError:
@@ -37,7 +38,7 @@ class NewPage:
         #         run seshat to get latex string,
         #           create lines attribute (dictionary)
         # a) store coordinates to self.lines
-        with open('/home/wenhan/PycharmProjects/UROPS2020/SCG/{}.scgink'.format(fname), 'r') as f:
+        with open('{}SCG/{}.scgink'.format(rootpt, fname), 'r') as f:
             f.readline()
             totalstrokes = f.readline()
 
@@ -80,10 +81,11 @@ class NewPage:
                     for i in range(len(strokes[0])):
                         linefile.write(str(strokes[0][i]) + ' ' + str(strokes[1][i]) + '\n')
             linefile.close()
-            os.chdir('/home/wenhan/PycharmProjects/UROPS2020/Seshat-master')
+            os.chdir('{}Seshat-master'.format(rootpt))
             tempfile = newpath + '/' + 'temp.txt'
             cmd = './seshat -c Config/CONFIG -i ' + output + ' -o out.inkml -r render.pgm -d out.dot > ' + tempfile
             os.system(cmd)
+            os.chdir(rootpt)
             with open(tempfile, "r") as f:
                 latex = f.readlines()[-1]
             f.close()

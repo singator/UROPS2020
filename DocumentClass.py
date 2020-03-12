@@ -9,6 +9,7 @@ Created on Wed Feb 12 11:40:12 2020
 from NewPageClass import NewPage
 from UnzipXopp import UnzipXopp
 from Convert import Convert
+import os
 
 
 # xopp file has to start writing from the 1st line. If not error will occur. Need to fix
@@ -30,7 +31,8 @@ class Document:
         return self.npages
 
     def toLatex(self):
-        outputfile = '/home/wenhan/PycharmProjects/UROPS2020/Latex/{}.tex'.format(self.fname)
+        rootpt = os.getcwd()+'/'
+        outputfile = '{}Latex/{}.tex'.format(rootpt, self.fname)
         with open(outputfile, "w") as f:
             f.write('\\documentclass{article}\n')
             f.write('\\usepackage[utf8]{inputenc}\n')
