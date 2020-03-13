@@ -16,4 +16,5 @@ Other conversion tools to try:
 1. https://www.researchgate.net/publication/270584254_ICFHR_2014_Competition_on_Recognition_of_On-line_Handwritten_Mathematical_Expressions_CROHME_2014
 2. Infty reader https://www.sciaccess.net/en/InftyReader/index.html (only works
 on pdf, not handwritten)
+3. Since the Windows input panel is so good, why don't we work from there?
 
