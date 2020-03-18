@@ -46,8 +46,8 @@ class Document:
             f.write('\\end{document}\n')
         f.close()
 
-    def evaluatePage(self, n):
-        self.getPage(n).evaluate()
+    def evaluatePage(self, n, type):
+        self.getPage(n).evaluate(type)
 
     def prettyPrint(self):
         for i in range(self.numPages()):

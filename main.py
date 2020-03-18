@@ -10,6 +10,8 @@ from DocumentClass import Document
 
 doc = Document('example1.xopp')
 doc.prettyPrint()
-doc.evaluatePage(0)
-doc.evaluatePage(1)
+doc.evaluatePage(0, 'Solve')
+doc.evaluatePage(1, 'Reduce')
+doc.evaluatePage(2, 'Solve')
+
 doc.toLatex()

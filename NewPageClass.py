@@ -10,7 +10,7 @@ import pandas as pd
 from CheckEquationEquality import check_eq_equality
 from sympy.parsing.latex import parse_latex
 import re
-
+from CheckExprEquality import check_expr_equality
 
 
 # class page to take in a scgink file
@@ -29,10 +29,12 @@ class NewPage:
         try:
             os.mkdir(newpath)
         except OSError:
-            print("Creation of the directory %s failed" % newpath)
-            print('Directory may already exist')
+            print('')
+            #print("Creation of the directory %s failed" % newpath)
+            #print('Directory may already exist')
         else:
-            print("Successfully created the directory %s " % newpath)
+            print('')
+            #print("Successfully created the directory %s " % newpath)
 
         # step 2: for each line, create a new scgink file using the filename + line num (Eg. test_line1.scgink),
         #         run seshat to get latex string,
@@ -106,20 +108,36 @@ class NewPage:
         else:
             return 'Line does not exist'
 
-    def evaluate(self):
+    def evaluate(self, type):
         if self.numlines > 0:
-            equations = list(map(lambda x: re.sub('\\n', '', x), list(self.lines.values())))
-            prior = parse_latex(r'{}'.format(equations[0]))
-            check = True
-            for i in range(1, len(equations)):
-                posterior = parse_latex(r'{}'.format(equations[i]))
-                if not check_eq_equality(prior, posterior):
-                    print('Fail at line "{}"'.format(equations[i]))
-                    check = False
-                    break
-                prior = posterior
-            if check:
-                print('Correct')
+            if type.lower() == 'solve':
+                equations = list(map(lambda x: re.sub('\\n', '', x), list(self.lines.values())))
+                prior = parse_latex(r'{}'.format(equations[0]))
+                check = True
+                for i in range(1, len(equations)):
+                    posterior = parse_latex(r'{}'.format(equations[i]))
+                    if not check_eq_equality(prior, posterior):
+                        print('Fail at line "{}"'.format(equations[i]))
+                        check = False
+                        break
+                    prior = posterior
+                if check:
+                    print('Correct')
+            elif type.lower() == 'reduce':
+                expressions = list(map(lambda x: re.sub('\\n', '', x), list(self.lines.values())))
+                prior = parse_latex(r'{}'.format(expressions[0]))
+                check = True
+                for i in range(1, len(expressions)):
+                    posterior = parse_latex(r'{}'.format(expressions[i]))
+                    if not check_expr_equality(prior, posterior):
+                        print('Fail at line "{}"'.format(expressions[i]))
+                        check = False
+                        break
+                    prior = posterior
+                if check:
+                    print('Correct')
+            else:
+                print('Question type cannot be evaluated')
         else:
             print('No equation to evaluate.')
 
