@@ -1,0 +1,95 @@
+Number of strokes: 3
+
+CYK table initialization:
+Stroke 0:
+           | [Bar] 0.00258253
+        \int [BigOp] 0.00315609
+       comma [Comma] 0.0619487
+       comma [DecSep] 0.0476544
+           1 [Digit] 0.0943242
+         dot [Dot] 0.00184631
+           ! [Facto] 2.61449e-05
+           f [LetterMin] 0.00450367
+       comma [OpBin] 0.0171951
+           + [OpSum] 0.00017601
+           + [OpUn] 6.2395e-05
+      \prime [Prime] 0.021866
+           1 [Sym] 0.089761
+           1 [leti] 0.137818
+           1 [letl] 0.137818
+           + [lett] 0.00017601
+Stroke 1:
+        dots [CDots] 2.9404e-08
+       comma [Comma] 4.4917e-05
+         dot [DecSep] 0.0191684
+           0 [Digit] 5.9215e-06
+         dot [Dot] 0.0249181
+        dots [LDots] 2.40741e-08
+           i [LetterMin] 9.70349e-07
+           - [OpBin] 0.796128
+           + [OpSum] 1.67797e-07
+           - [OpUn] 1.31532
+           i [Sym] 7.69395e-07
+           - [hline] 1.37057
+           i [leti] 2.63211e-06
+           0 [leto] 1.3424e-05
+           + [lett] 1.67797e-07
+Stroke 2:
+           2 [Digit] 1.311
+           R [LetterCap] 8.97922e-09
+           z [LetterMin] 0.00026967
+        \geq [OpBin] 2.167e-08
+           2 [Sym] 0.739562
+           1 [leti] 7.76421e-06
+           1 [letl] 7.76421e-06
+Multi-stroke (2) hypothesis: { 0 1 }
+        rpar [ClosePar] 6.86027e-07
+       comma [Comma] 1.39541e-05
+       comma [DecSep] 1.07343e-05
+           1 [Digit] 4.51144e-06
+         dot [Dot] 2.18355e-06
+           x [LetterMin] 5.97978e-07
+           + [OpBin] 0.00485052
+           + [OpSum] 0.0072077
+           + [OpUn] 0.00255511
+      \prime [Prime] 5.88312e-07
+           1 [Sym] 4.29318e-06
+           - [hline] 1.91448e-07
+           1 [leti] 6.59173e-06
+           1 [letl] 6.59173e-06
+           + [lett] 0.0072077
+Multi-stroke (2) hypothesis: { 1 2 }
+        \sum [BigOp] 0.00260263
+           1 [Digit] 5.62414e-05
+           I [LetterCap] 2.02389e-09
+           z [LetterMin] 3.54522e-06
+       equal [OpBin] 2.57179e-05
+         \pm [OpUn] 2.06197e-07
+           1 [Sym] 5.35205e-05
+           1 [leti] 8.21751e-05
+           1 [letl] 8.21751e-05
+Multi-stroke (3) hypothesis: { 0 1 2 }
+           2 [Digit] 3.80768e-08
+           k [LetterMin] 1.30856e-05
+        \div [OpBin] 7.21794e-05
+           + [OpSum] 2.42704e-07
+         \pm [OpUn] 5.90139e-05
+           k [Sym] 9.38197e-06
+           1 [leti] 4.19309e-08
+           1 [letl] 4.19309e-08
+           t [lett] 8.81202e-07
+
+CYK parsing algorithm
+Size 1: Generated 3
+Size 2: Generated 2
+Size 3: Generated 1
+
+Most Likely Hypothesis (3 strokes)
+
+Math Symbols:
+1 { 0 }
+- { 1 }
+2 { 2 }
+
+LaTeX:
+\frac{1}{2}
