@@ -7,9 +7,7 @@ The math expression recognition model is described in:
 
 Installation and how to use:
 1. Download it as zip file or clone
-2. Open DocumentClass.py and NewPageClass.py. Change all root path directory to adjust for you own local use. (i.e. (your own path)/UROPS2020/....) 
-3. Open main.py. There is an example file in the Input folder. Run main.py
-4. A Latex file will be generated in the Latex folder. 
+2. Open main.py. Run main.py with the example xopp files in the Input folder.
 
 Other conversion tools to try:
 
