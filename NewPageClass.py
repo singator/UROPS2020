@@ -45,30 +45,23 @@ class NewPage:
             totalstrokes = f.readline()
 
             for strokeindex in range(int(totalstrokes)):
+                npts = f.readline()
+                xcoor = []
+                ycoor = []
+                for j in range(int(npts)):
+                    pt = f.readline().split(' ')
+                    xcoor.append(float(pt[0]))
+                    ycoor.append(float(pt[1]))
 
-                # 30 lines per page
-                if strokeindex < 30:
-                    f.readline()
-                    f.readline()
-                    f.readline()
-                else:
-                    npts = f.readline()
-                    xcoor = []
-                    ycoor = []
-                    for j in range(int(npts)):
-                        pt = f.readline().split(' ')
-                        xcoor.append(float(pt[0]))
-                        ycoor.append(float(pt[1]))
+                midpt = (max(ycoor) + min(ycoor)) / 2
+                for index, row in self.templines.iterrows():
+                    if midpt > row['start'] and midpt < row['end']:
+                        linenum = index
+                        break
 
-                    midpt = (max(ycoor) + min(ycoor)) / 2
-                    for index, row in self.templines.iterrows():
-                        if midpt > row['start'] and midpt < row['end']:
-                            linenum = index
-                            break
-
-                    if linenum not in self.lines:
-                        self.lines[linenum] = {}
-                    self.lines[linenum][strokeindex] = [xcoor, ycoor]
+                if linenum not in self.lines:
+                    self.lines[linenum] = {}
+                self.lines[linenum][strokeindex] = [xcoor, ycoor]
         f.close()
 
         # b) for each line, create a new scginkfile in Output/fname directory and run seshat for each line
