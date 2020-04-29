@@ -1,6 +1,6 @@
 # UROPS2020
 
-This is a school project which attempts to build a pipeline that converts mathematical handwriting to Latex using the proprietary model from the work of Francisco Álvaro, Joan-Andreu Sánchez and José-Miguel Benedí. The Latex file will then be processed via Mathematica to performing autograding.
+This is a school project which attempts to build a pipeline that converts mathematical handwriting to Latex using the proprietary model from the work of Francisco Álvaro, Joan-Andreu Sánchez and José-Miguel Benedí. The Latex file will then be processed via Sympy to performing autograding.
 
 The math expression recognition model is described in:
 * Francisco Álvaro, Joan-Andreu Sánchez and José-Miguel Benedí. An Integrated Grammar-based Approach for Mathematical Expression Recognition. Pattern Recognition, pp. 135-147, 2016
