@@ -7,7 +7,8 @@ The math expression recognition model is described in:
 
 Installation and how to use:
 1. Download it as zip file or clone
-2. Open main.py. Run main.py with the example xopp files in the Input folder.
+2. Set up seshat using instructions from https://github.com/falvaro/seshat
+3. Open main.py. Run main.py with the example xopp files in the Input folder.
 
 Other conversion tools to try:
 
