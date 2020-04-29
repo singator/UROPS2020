@@ -1,12 +1,52 @@
 digraph mathExp{
-Term0 -> Sym1 [label=H]
-Tx1 [shape=box,label="x"]
-Sym1 -> Tx1
-Term0 -> OpSym2 [label=H]
-OpSym2 -> OpBin3 [label=H]
-Te3 [shape=box,label="="]
-OpBin3 -> Te3
-OpSym2 -> Sym4 [label=H]
-T34 [shape=box,label="3"]
-Sym4 -> T34
+Term0 -> Term1 [label=H]
+Term1 -> Term2 [label=H]
+Term2 -> OpenPar3 [label=H]
+TL3 [shape=box,label="("]
+OpenPar3 -> TL3
+Term2 -> TermPar4 [label=H]
+TermPar4 -> Term5 [label=H]
+Term5 -> Sym6 [label=H]
+Tx6 [shape=box,label="x"]
+Sym6 -> Tx6
+Term5 -> OpTerm7 [label=H]
+OpTerm7 -> OpBin8 [label=H]
+Tp8 [shape=box,label="+"]
+OpBin8 -> Tp8
+OpTerm7 -> Term9 [label=H]
+Term9 -> Digit10 [label=H]
+T110 [shape=box,label="1"]
+Digit10 -> T110
+Term9 -> Digit11 [label=H]
+T311 [shape=box,label="3"]
+Digit11 -> T311
+TermPar4 -> ClosePar12 [label=H]
+TR12 [shape=box,label=")"]
+ClosePar12 -> TR12
+Term1 -> Term13 [label=H]
+Term13 -> OpenPar14 [label=H]
+TL14 [shape=box,label="("]
+OpenPar14 -> TL14
+Term13 -> TermPar15 [label=H]
+TermPar15 -> Term16 [label=H]
+Term16 -> Sym17 [label=H]
+Tx17 [shape=box,label="x"]
+Sym17 -> Tx17
+Term16 -> OpSym18 [label=H]
+OpSym18 -> OpBin19 [label=H]
+Tm19 [shape=box,label="-"]
+OpBin19 -> Tm19
+OpSym18 -> Sym20 [label=H]
+T520 [shape=box,label="5"]
+Sym20 -> T520
+TermPar15 -> ClosePar21 [label=H]
+TR21 [shape=box,label=")"]
+ClosePar21 -> TR21
+Term0 -> OpSym22 [label=H]
+OpSym22 -> OpBin23 [label=H]
+Te23 [shape=box,label="="]
+OpBin23 -> Te23
+OpSym22 -> Sym24 [label=H]
+T024 [shape=box,label="0"]
+Sym24 -> T024
 }

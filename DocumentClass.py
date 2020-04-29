@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 12 11:40:12 2020
-
-@author: wenhan
-"""
-
 from NewPageClass import NewPage
 from UnzipXopp import UnzipXopp
 from Convert import Convert

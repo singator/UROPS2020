@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  4 22:39:47 2020
-
-@author: wenhan
-"""
 import os
 import pandas as pd
 from CheckEquationEquality import check_eq_equality
