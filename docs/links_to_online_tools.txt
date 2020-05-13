@@ -1,0 +1,12 @@
+# Repository with CROHME data organized:
+
+CROHME focus:
+CROHME inkML viewer: http://saskatoon.cs.rit.edu/inkml_viewer/
+CROHME home page (to download data): https://www.isical.ac.in/~crohme/CROHME_data.html
+Latest CROHME data preprocessed: https://github.com/nurmister/math-recognition
+CROHME=based end-to-end systems: https://www.cs.rit.edu/~dprl/Software.html#crohme
+Implementation of "beats_SOTA" paper, trained on bad data: https://github.com/nurmister/math-formula-recognition
+
+Miscellaneous:
+SESHAT's parser: http://cat.prhlt.upv.es/mer/
+Using contour-detection to segment question answers: https://towardsdatascience.com/computer-vision-auto-grading-handwritten-mathematical-answersheets-8974744f72dd
